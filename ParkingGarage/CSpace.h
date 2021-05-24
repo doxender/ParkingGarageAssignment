@@ -26,6 +26,11 @@ public:
     // outputs: the space number
     int GetSpaceSize();
 
+    // Park
+    //  inputs: a Vehicle to be parked
+    //  return: success/failure if the vehicle could be parked or not
+    int Park(CVehicle* Vehicle);
+
 private:
 
     int mSpaceNumber;

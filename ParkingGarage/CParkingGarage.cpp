@@ -1,5 +1,6 @@
 #include "Globals.h"
 #include "CParkingGarage.h"
+#include "CFloor.h"
 
 //Constructor
 CParkingGarage::CParkingGarage()
@@ -38,4 +39,25 @@ int CParkingGarage::GetNumberOfFloors()
 {
     return(mFloors.size());
 };
+
+// Park
+//  inputs: a Vehicle to be parked
+//  return: success/failure if the vehicle could be parked or not
+int CParkingGarage::Park(CVehicle* Vehicle)
+{
+    if (NULL == Vehicle)
+    {
+        return(FAILURE);
+    }
+
+    for(auto & floor : mFloors )
+    {
+        if (floor->Park(Vehicle))
+        {
+            break; //if we are successful parking the vehicle, we don't need to go any further
+        }
+    }
+
+    return(SUCCESS);
+}
 

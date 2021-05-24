@@ -42,3 +42,16 @@ int CFloor::AddRow(CRow* Row)
     rows.push_back(Row);
     return(SUCCESS);
 }
+
+// Park
+ //  inputs: a Vehicle to be parked
+ //  return: success/failure if the vehicle could be parked or not
+int CFloor::Park(CVehicle* Vehicle)
+{
+    if (NULL == Vehicle)
+    {
+        return(FAILURE);
+    }
+
+    return(SUCCESS);
+}

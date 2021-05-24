@@ -28,6 +28,11 @@ public:
     // returns: success/failure
     int AddSpace(CSpace* Space);
 
+    // Park
+    //  inputs: a Vehicle to be parked
+    //  return: success/failure if the vehicle could be parked or not
+    int virtual Park(CVehicle* Vehicle);
+
 private:
 
     int mRowNumber;

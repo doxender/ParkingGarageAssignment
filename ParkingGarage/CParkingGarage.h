@@ -1,8 +1,10 @@
 #pragma once
 #include <vector>
 
-using namespace std;
+class CVehicle; //forward defination
 class CFloor;    //forward defination
+
+using namespace std;
 
 class CParkingGarage
 {
@@ -32,6 +34,11 @@ public:
     // Called to return the number of floors in the parking garage
     //   
     int GetNumberOfFloors();
+
+    // Park
+    //  inputs: a Vehicle to be parked
+    //  return: success/failure if the vehicle could be parked or not
+    int virtual Park(CVehicle* Vehicle);
 
 private:
 

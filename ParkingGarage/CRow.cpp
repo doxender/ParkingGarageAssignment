@@ -38,3 +38,17 @@ int CRow::AddSpace(CSpace* Space)
     spaces.push_back(Space);
     return(SUCCESS);
 }
+
+
+// Park
+//  inputs: a Vehicle to be parked
+//  return: success/failure if the vehicle could be parked or not
+int CRow::Park(CVehicle* Vehicle)
+{
+    if (NULL == Vehicle)
+    {
+        return(FAILURE);
+    }
+
+    return(SUCCESS);
+}

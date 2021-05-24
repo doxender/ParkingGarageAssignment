@@ -7,8 +7,15 @@
 #define MAX_SPACES 50  // maxium number of spaces in a row
 
 //The space sizes
-#define UNDEFINED -1
+#define UNDEFINED_SIZE -1
 #define MOTORCYCLE_SIZE 1
 #define COMPACT_SIZE 2
 #define LARGE_SIZE 3
 #define NUMBER_OF_LARGE_SPACES_FOR_BUS 5
+
+//The vehicles
+#define UNDEFINED_VEHICLE -1
+#define MOTORCYCLE 1
+#define COMPACT 2
+#define LARGE 3
+

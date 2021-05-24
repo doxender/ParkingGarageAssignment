@@ -29,6 +29,11 @@ public:
     // returns: success/failure
     int AddRow(CRow* Row);
 
+    // Park
+    //  inputs: a Vehicle to be parked
+    //  return: success/failure if the vehicle could be parked or not
+    int virtual Park(CVehicle* Vehicle);
+
 private:
     int mFloorNumber;
     vector<CRow*> rows;

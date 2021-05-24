@@ -6,8 +6,13 @@ CSpace::CSpace()
 {
     mSpaceNumber = 0;
 
+    //Set the space size with a random number
     int random_space_size = rand() % 3 + 1;  //generates a random number 1,2,3
  
+    //switch statement ensures we have a correct assignment
+    //    although, in theory, we could simply assign random_space_size to the
+    //    space size member variable, this statement ensures that the variable
+    //    value is constrained to one of four values
     switch (random_space_size)
     {
     case MOTORCYCLE_SIZE:
@@ -23,7 +28,7 @@ CSpace::CSpace()
         break;
 
     default:
-        mSpaceSize = UNDEFINED;
+        mSpaceSize = UNDEFINED_SIZE;
         break;
     }
 
@@ -58,4 +63,17 @@ int CSpace::GetSpaceNumber()
 int CSpace::GetSpaceSize()
 {
     return(mSpaceSize);
+}
+
+// Park
+//  inputs: a Vehicle to be parked
+//  return: success/failure if the vehicle could be parked or not
+int CSpace::Park(CVehicle* Vehicle)
+{
+    if (NULL == Vehicle)
+    {
+        return(FAILURE);
+    }
+
+    return(SUCCESS);
 }
